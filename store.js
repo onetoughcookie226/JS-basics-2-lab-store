@@ -12,15 +12,27 @@ var products = [
 
 // Declare `shoppingCart`, something where you will be storing all products that the user buys.
 var shoppingCard = []
+
 // Declare `products`, the different that you will be selling under each of the departments.
 
 
 var printProductsFromShoppingCart = function() {
+  return shoppingCard;
   // iterate over the shoppingCart and display the contents
   // use the printProductsOnScreen function for inspiration
 };
 
+// function selectProduct () {
+//   var newProduct = document.getElementsByClassName("name")
+
+//   console.log(newProduct)
+//   // console.log('onclick', this)
+// }
+
+
+
 var addProductToCart = function(productNumber) {
+
   console.log(productNumber);
   // Find the product in the array of objects with the correct reference number
     
@@ -61,9 +73,17 @@ var printProductsOnScreen = function () {
       addProductToCart(productNumber);
     };
 
+
+
     var nameElement = document.createElement('span');
     nameElement.className  = 'name';
     nameElement.innerText = product.name;
+    nameElement.onclick = function () {
+      var newProduct =this.innerHTML
+    addProductToCart(newProduct);
+    shoppingCard.push (newProduct)
+
+    }
 
     var priceElement = document.createElement('span');
     priceElement.className  = 'price';
