@@ -15,9 +15,6 @@ var shoppingCard = []
 // Declare `products`, the different that you will be selling under each of the departments.
 
 
-
-
-
 var printProductsFromShoppingCart = function() {
   // iterate over the shoppingCart and display the contents
   // use the printProductsOnScreen function for inspiration
@@ -26,6 +23,7 @@ var printProductsFromShoppingCart = function() {
 var addProductToCart = function(productNumber) {
   console.log(productNumber);
   // Find the product in the array of objects with the correct reference number
+    
   // Add the product to your shopping cart
 
 
